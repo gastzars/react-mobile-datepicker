@@ -1,8 +1,8 @@
 :root {
     --default-bg: #f7f7f7;
-    --default-color: color(var(--default-bg) contrast(50%));
+    --default-color: #0e162c;
     --default-disabled-color: color(var(--default-color) blend(var(--default-bg) 70%));
-    --default-theme: #4eccc4;
+    --default-theme: #ff8300;
 
     --dark-bg: #263238;
     --dark-color: color(var(--dark-bg) contrast(50%));
@@ -139,15 +139,15 @@
             color: var(--default-theme);
         }
         .datepicker-wheel {
-            border-top: 1px solid var(--default-theme);
-            border-bottom: 1px solid var(--default-theme);
+            border-top: 1px solid #dee1e9;
+            border-bottom: 1px solid #dee1e9;
         }
         .datepicker-caption-item {
             color: var(--default-color);
         }
         .datepicker-scroll {
             li {
-                color: var(--default-color);
+                color: #0e162c;
             }
 
             li.disabled {
