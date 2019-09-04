@@ -73,6 +73,7 @@
     .datepicker-caption {
         display: flex;
         padding: .5em .25em;
+        border-bottom: 1px solid #dee1e9;
     }
 
     .datepicker-caption-item {
@@ -152,6 +153,11 @@
 
             li.disabled {
                 color: var(--default-disabled-color);
+            }
+        }
+        .datepicker-viewport {
+            &::after {
+                background: linear-gradient(#f7f7f7,rgba(245,245,245,0)52%,rgba(245,245,245,0)48%,#f7f7f7);
             }
         }
         .datepicker-navbar-btn {
