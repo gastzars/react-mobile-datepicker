@@ -58,6 +58,7 @@ function daysInMonth(year, month) {
 function convertDate(date, format) {
     var str = format;
     var o = {
+        'Y+': date.getFullYear(),
         'M+': date.getMonth() + 1,
         'D+': date.getDate(),
         'h+': date.getHours(),
@@ -109,6 +110,9 @@ function convertDate(date, format) {
                     str = "ธันวาคม";
                     break;
             }
+        } else if (new RegExp('(' + k + ')').test(format) && format === "YYYYY") {
+            str = parseInt(o[k]) + 543;
+            str = String(str);
         } else if (new RegExp('(' + k + ')').test(format)) {
             str = str.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(o[k].toString().length));
         }
